@@ -1,65 +1,123 @@
+
 /********** Base styles **********/
-* {
+* {/*defaults to override the borwser setting are done here*/
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 h1 {
   margin-bottom: 15px;
   text-align: center;
-  padding:20px;
+  padding:50px;
 }
 
 p {
   border: 1px solid black;
-  background-color: #AAAAAA;
-  width: 20%;
+  background-color: #A52A2A;
+  width: 90%;
+  height: 150px;
   margin-right: auto;
   margin-left: auto;
   font-family: Helvetica;
   color: white;
-  text-align: center;
 }
 
 /* Simple Responsive Framework. */
 .row {
   width: 100%;
-  padding: 40px;
 }
-p.Item1 {
-  background-color: #ff6666;
+
+div {
+  background-color: #AAAAAA;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.MenuItem1 {
+  font-size: 1.5em;
+  background-color: #ff9999;
+  color:black;
+  text-align: center;
+  width: 30%;
+  height: 20%;
+  padding: 2%;
+  float: right;
+  position: relative;
+  top:0px;
+  margin-right: -1px;
+  margin-top: -1px;/*not sure where the top margin was coming from, but reset it here. Had to give a negative margin, the same width as the border widths applied in order to get them to overlap.*/
+
+}
+.MenuItem2 {
+  font-size: 1.5em;
+  background-color: #cc3300;
+  text-align: center;
+  width: 30%;
+  height: 20%;
+  padding: 2%;
+  float: right;
+  position: relative;
+  top:0px;
+  margin-right: -1px;
+  margin-top: -1px;/*not sure where the top margin was coming from, but reset it here. Had to give a negative margin, the same width as the border widths applied in order to get them to overlap.*/
+
+}
+
+.MenuItem3 {
+  font-size: 1.5em;
+  background-color: #ffcc66;
+  text-align: center;
   color: black;
-  margin-right: 0px;
+  width: 30%;
+  height: 20%;
+  padding: 2%;
+  float: right;
+  position: relative;
+  top:0px;
+  margin-right: -1px;
+  margin-top: -1px;/*not sure where the top margin was coming from, but reset it here. Had to give a negative margin, the same width as the border widths applied in order to get them to overlap.*/
+} /*these must all be half of the MenuItem settings since it spans twice the width */
 
-}
-
-p.Item2 {
-  background-color: #cc0000;
-  color: white;
-  text-shadow: black;
-  margin-right: 0px;
-}
-
-p.Item3 {
-  background-color: #ff9900;
+.text1 {
+  font-size: 1.05em;
+  background-color: #AAAAAA;
   color: black;
-  text-shadow: black;
-  margin-right: 0px;
+  border: 0px;
+  margin-top: 50px;
+  padding-top: 3%;
+  padding-right: 1%;
+  margin-bottom: 0px;
+  /*Reduce the bottom margin here. */
 }
 
-.text {
-  text-align: left;
-  margin-right: 0px;
-  margin-left: 0px;
-  padding-top: 0px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
+.text2 {
+  font-size: 1.05em;
+  background-color: #AAAAAA;
+  color: black;
+  border: 0px;
+  margin-top: 50px;
+  padding-top: 1%;
+  padding-right: 3%;
+  margin-bottom: 0px;
+  /*Reduce the bottom margin here. */
 }
 
-/********** Large devices only (desktop)**********/
+.text3 {
+  font-size: 1.05em;
+  background-color: #AAAAAA;
+  color: black;
+  border: 0px;
+  margin-top: 50px;
+  padding-top: 1%;
+  padding-right: 3%;
+  margin-bottom: 0px;
+  /*Reduce the bottom margin here. */
+}
+
+/********** Large devices only **********/
 @media (min-width: 992px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
-    border: 1px solid black;
+    border: 2px solid black;
   }
   .col-lg-1 {
     width: 8.33%;
@@ -71,13 +129,15 @@ p.Item3 {
     width: 25%;
   }
   .col-lg-4 {
-    width: 33.33%;
-  }
+    width: 30%;
+    margin-left: 2.25%;
+    margin-right: -0.75%;
+  }/*I had to reduce the size of the divisions in order to have space between them to fit on the page. Specified each left and right separatly because they didn't align up nicely on the page. The right margin has to be negative.*/
   .col-lg-5 {
     width: 41.66%;
   }
   .col-lg-6 {
-    width: 50%;
+    width: 1%;
   }
   .col-lg-7 {
     width: 58.33%;
@@ -99,11 +159,11 @@ p.Item3 {
   }
 }
 
-/********** Medium devices only (tablet)**********/
+/********** Medium devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    border: 1px solid green;
+    border: 1px solid black;
   }
   .col-md-1 {
     width: 8.33%;
@@ -122,6 +182,7 @@ p.Item3 {
   }
   .col-md-6 {
     width: 50%;
+    margin:0%;
   }
   .col-md-7 {
     width: 58.33%;
@@ -139,16 +200,16 @@ p.Item3 {
     width: 91.66%;
   }
   .col-md-12 {
-    clear:all;
     width: 100%;
+    margin:0%;
   }
 }
 
-/********** Small devices only (nobile)**********/
+/********** Small devices only **********/
 @media (max-width: 767px) {
   .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
     float: left;
-    border: 1px solid green;
+    border: 1px solid black;
   }
   .col-xs-1 {
     width: 8.33%;

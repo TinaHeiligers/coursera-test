@@ -1,0 +1,101 @@
+/* reset display defaults*/
+* {
+  box-sizing: border-box;
+  margin: 0em;
+}
+
+body {
+  font-size:1em;
+  font-family:"Comic Sans MS", cursive, sans-serif;
+  color: black;
+  width: 100%;
+  /*margin: -1em;*/
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1{
+  font-size: 1.75em;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+section {
+  background-color: #AAAAAA;
+  border: 1px solid black;
+  padding-top:2.8em;
+  /*Setting parent to be anchor for children's position*/
+  position: relative;
+  /*ensuring centering of each section*/
+  margin-left:auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 1.25em;
+  border: 1px solid black;
+  /*setting position to top right of parent*/
+  position: absolute;
+  right: 0.0em;
+  top: 0.0em;
+  min-width: 6em;
+  /*padding for text alignment*/
+  padding: 0.2em 0.5em 0.2em 0.5em;
+}
+
+p {
+  font-family: Helvetica, arial;
+  /*padding to make text easier to read*/
+  padding-right: 1em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  /*setting max height and what to do with text overflow*/
+  max-height:15em;
+  overflow: auto;
+}
+
+.col-lg-4, .col-md-6, .col-md-12, .col-sm-12 {
+  /*floating for spill over*/
+  float:left;
+  padding: 1em;
+}
+
+#item1 {
+  background-color: green;
+}
+
+#item2 {
+  background-color: blue;
+  color: white;
+}
+
+#item3 {
+  background-color: orange;
+}
+
+/*media (viewport) queries*/
+@media (min-width: 992px) {
+  .col-ld-4 {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  /*span 6 columns (two per 'row')*/
+  .col-md-6 {
+    width: 50%;
+  }
+  /*span all columns (one per 'row')*/
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  /*span all columns (one per 'row')*/
+  .col-sm-12 {
+    width: 100%;
+  }
+}

@@ -111,11 +111,11 @@ div#collapsable-nav.navbar-collapse.collapse.in  {
   padding-bottom: 0.5em;
 }
 #chicken-tile, #beef-tile, #sushi-tile {
-  height: 350px;
+  height: 900px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;
-  border: 1px dashed #3F0C1F;
+  border: 1px solid #3F0C1F;
   overflow: scroll;
   background-color: #e5e2db;
 }

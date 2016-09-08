@@ -1,14 +1,23 @@
+/*color palette
+
+#A8A7A7
+#CC527A
+#E8175D
+#474747
+#363636  
+*/
+
 body {
   font-size: 16px;
-  color: #282D33;
-  background-color: #999177;
+  color: #363636;
+  background-color: #A8A7A7;
   font-family: 'Comic Sans MS', sans-serif;
 }
 
 /** HEADER **/
 
 #header-nav {
-  background-color: #282D33; /* warm grey */
+  background-color: #594F4F; /* warm grey */
   border-radius: 0;
 }
 
@@ -34,7 +43,7 @@ body {
 
 /* Setting default color of icon bars */
 .navbar-header .navbar-toggle, .navbar-header .icon-bar {
-  border: 1px solid #999177;
+  border: 1px solid beige;
 }
 
 div#collapsable-nav.navbar-collapse.collapse.in  {
@@ -69,7 +78,8 @@ div#collapsable-nav.navbar-collapse.collapse.in  {
 
 .navbar-brand h1 {
   font-family: Verdana, Geneva, sans-serif; /*Find suitable font*/
-  color: #999177;
+  color: beige;
+  text-shadown: 2px 2px #594F4F;
   font-size: 1.5em;
   font-weight: bold;
   margin-top: 0;
@@ -89,7 +99,7 @@ div#collapsable-nav.navbar-collapse.collapse.in  {
   margin-top: 0px;
 }
 #nav-list a {
-  color: #999177;
+  color: beige;
   font-size: 1.3em;
   font-family: sans-serif;
   text-align: center;
@@ -111,7 +121,8 @@ div#collapsable-nav.navbar-collapse.collapse.in  {
   padding-bottom: 0.5em;
 }
 #chicken-tile, #beef-tile, #sushi-tile {
-  height: 900px;
+  min-height: 950px;
+  max-height: 1200px;
   width: 100%;
   margin-bottom: 15px;
   position: relative;
@@ -157,4 +168,14 @@ a:hover {
   text-decoration: none;
   /*color: #000034;*/
   color: #000080;
+}
+
+/*********md**********/
+@media (max-width: 991px) {
+  #sushi-tile {
+    max-height: 250px;
+  }
+  #chicken-tile, #beef-tile {
+    max-height: 350px;
+  }
 }

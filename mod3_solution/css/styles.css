@@ -1,0 +1,158 @@
+body {
+  font-size: 16px;
+  color: #282D33;
+  background-color: #999177;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+/** HEADER **/
+
+#header-nav {
+  background-color: #282D33; /* warm grey */
+  border-radius: 0;
+}
+
+.navbar-default {
+  border-color: black;
+  background-color: transparent;
+}
+
+.navbar-toggle {
+  background-color: transparent;
+  clear: both;
+}
+
+.navbar-default .navbar-toggle:hover {
+  border-color: #777888;
+  background-color: transparent;
+}
+
+.navbar-default .navbar-toggle:active {
+  border-color: #777888;
+  background-color: transparent;
+}
+
+/* Setting default color of icon bars */
+.navbar-header .navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid #999177;
+}
+
+div#collapsable-nav.navbar-collapse.collapse.in  {
+  margin-bottom: -8px;
+
+}
+
+/* Changing color of icon bars on hover */
+.navbar-header .navbar-toggle:hover .icon-bar {
+  border: 1px solid #777888;
+}
+
+.navbar-header .navbar-toggle {
+  margin-top: -50px;
+}
+
+#header-nav.navbar.navbar-default nav{
+  margin-bottom: 0px;
+}
+
+/* removing margin from navbar list to add borders*/
+#nav-list.nav.navbar-nav.navbar-right.visible-xs ul{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-brand {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.navbar-brand h1 {
+  font-family: Verdana, Geneva, sans-serif; /*Find suitable font*/
+  color: #999177;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 0.75;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    border-color: #282D33;
+}
+
+#nav-list {
+  margin-top: 0px;
+}
+#nav-list a {
+  color: #999177;
+  font-size: 1.3em;
+  font-family: sans-serif;
+  text-align: center;
+  padding-bottom: 15px;
+  padding-top: 0px;
+  line-height: 1em;
+  border-top: 1px solid #132333;
+  background-color: #505B66;
+}
+
+#nav-list a:hover {
+  background: #d3d3d3;
+}
+
+/* END HEADER */
+
+/* HOME PAGE */
+#main-content h1 {
+  padding-bottom: 0.5em;
+}
+#chicken-tile, #beef-tile, #sushi-tile {
+  height: 350px;
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+  border: 1px dashed #3F0C1F;
+  overflow: scroll;
+  background-color: #e5e2db;
+}
+
+#chicken-tile:hover, #beef-tile:hover, #sushi-tile:hover {
+  box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#chicken-tile h3, #beef-tile h3, #sushi-tile h3 {
+  position: absolute;
+  margin-top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  color: black;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+#chicken-tile p, #beef-tile p, #sushi-tile p {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  padding-top: 2.5em;
+  text-align: left;
+  font-size: 1.0em;
+  color: black;
+}
+
+a {
+  color: black;
+  /*font-style: italic;*/
+  font-size: 0.9em;
+  font-family: Impact, Charcoal, sans-serif;
+}
+
+a:hover {
+  text-decoration: none;
+  /*color: #000034;*/
+  color: #000080;
+}

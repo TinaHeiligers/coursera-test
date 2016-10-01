@@ -12,12 +12,12 @@
     $scope.string = "";
     $scope.check = function () {
       if (!$scope.string)
-        $scope.message = "Please enter data first";
+        $scope.msg = "Please enter data first";
       else {
         if ($scope.string.split(",").length < 4)
-          $scope.message = "Enjoy!";
+          $scope.msg = "Enjoy!";
         else
-          $scope.message = "Too much!";
+          $scope.msg = "Too much!";
       }
     };
   }

@@ -9,7 +9,7 @@
     <title>Lunch Item Count With Message</title>
   </head>
 
-  <body ng-app="NameCalculator">
+  <body ng-app="LunchCheck">
     <div class="container" ng-controller="NameCalculatorController">
       <h1>Lunch Checker</h1>
         <div class="form-group">
@@ -19,12 +19,9 @@
         </div>
         <div class="form-group">
           <button class="btn btn-default" ng-click="displayNumeric()">Check If Too Much</button>
-          <!-- need to invoke the message() function as well -->
         </div>
         <div class="form-group message">
-          <!-- Total number of items: {{totalValue}} -->
-          <br>
-          Message To Display is: {{messageText}}
+          Including "empty" items between commas: {{messageText}}
         </div>
       </div>
   </body>

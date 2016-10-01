@@ -4,11 +4,11 @@
 angular.module('LunchCheck', [])
 
 // .controller('NameCalculatorController', function ($scope) {
-.controller('NameCalculatorController', NameCalculatorController);
+.controller('LunchCheckController', LunchCheckController);
 
-NameCalculatorController.$inject = ['$scope'];
+LunchCheckController.$inject = ['$scope'];
 
-function NameCalculatorController($scope) {
+function LunchCheckController($scope) {
   $scope.name = "";
   $scope.totalValue = 0;
   $scope.messageText = "";

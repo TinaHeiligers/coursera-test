@@ -1,15 +1,16 @@
-.message { 
+/*.message { 
   font-size: 1.3em;
   font-weight: bold; 
-  border: 0px solid green;
-}
-
-.green {
+  border: 1px solid white;
+}*/
+.dataGiven {
   color: green;
   /*border: 1px solid green;*/
 }
 
-.red {
+.dataNotGiven {
   color: red;
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
+
+

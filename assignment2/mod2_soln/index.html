@@ -18,18 +18,20 @@
      <h2>To Buy:</h2>
      <ul>
      <li ng-repeat="item in tobuy.shoppingList">
-       {{$index + 1}}. Buy {{item.quantity}} of {{item.name}}(s)
-        <button class="btn btn-default" ng-click="addToList()"><span class="glyphicon glyphicon-ok"></span> Bought</button>
+       Buy {{item.quantity}} {{item.name}}(s)
+        <button class="btn btn-default" ng-click="addToBoughtList()"><span class="glyphicon glyphicon-ok"></span> Bought</button>
       </li>
      </ul>
      <div class="emptyMessage">Everything is bought!</div>
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller='ToBuyController'>
+    <div class="col-md-6" ng-controller='AlreadyBoughtController as alreadybought'>
      <h2>Already Bought:</h2>
      <ul>
-      <li ng-repeat="item in shoppingList2">{{$index + 1}}. Bought {{item.quantity}} {{item.name}} 
+      <!-- <li ng-repeat="item in alreadybought.shoppingList"> -->
+      <li ng-repeat="item in alreadybought.shoppingList">
+       Bought {{item.quantity}} {{item.name}}(s)
       </li>
      </ul>
      <div class="emptyMessage">Nothing bought yet.</div>

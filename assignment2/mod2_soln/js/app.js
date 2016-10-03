@@ -27,8 +27,8 @@ var shoppingList = [
 
 var shoppingList2 = [
   {
-    name: "",
-    quantity: ""
+    name: "testing",
+    quantity: "10"
   }
 ];
 
@@ -41,7 +41,7 @@ var shoppingList2 = [
   function ToBuyController() {
     var tobuy = this
     tobuy.shoppingList = shoppingList
-    console.log(tobuy.shoppingList)
+    
     // console.log("shoppinglist: ", shoppingList)
     // console.log("shoppingList[0].name: ", shoppingList[0].name)
     // console.log("shoppingList[0].quantity: ", shoppingList[0].quantity)
@@ -49,35 +49,25 @@ var shoppingList2 = [
     // $scope.message = "";
     // $scope.status = "";
     // $scope.col = "";
-
-    // $scope.addToList = function () {
-    //   var newItem = {
-    //     name: $scope.newItemName,
-    //     quantity: $scope.newItemQuantity
-    //   };
-
-    //   // $scope.shoppingList.pop(newItem);//?//
-    // };
+    // NEED A FUNCTION TO:
+    // remove the item from the "toBuy" list on click
+    // Must happen on ng-click
   }
   AlreadyBoughtController.$inject = ["$scope"];
   function AlreadyBoughtController($scope) {
     var alreadybought = this;
-    alreadybought.shoppinglist = shoppingList2
-    console.log("AlreadyBoughtController $scope: ", $scope);
+    alreadybought.shoppingList = shoppingList2
+    console.log(alreadybought.shoppingList)
 
     // $scope.string = "";
     // $scope.message = "";
     // $scope.status = "";
     // $scope.col = "";
 
-    $scope.addToList = function () {
-      var newItem = {
-        name: $scope.newItemName,
-        quantity: $scope.newItemQuantity
-      };
+    // NEED A FUNCTION TO:
+    // add the item removed from the tobuy list to the alreadybought list
+    // Must happen on ng-click
 
-      $scope.shoppingList2.push(newItem);
-    };
   }
 
 }());

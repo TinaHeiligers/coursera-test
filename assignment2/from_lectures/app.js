@@ -1,36 +1,5 @@
-"use strict";
-
 (function () {
-
-var shoppingList = [
-  {
-    name: "Onions",
-    quantity: "2"
-  },
-  {
-    name: "Garlic",
-    quantity: "1"
-  },
-  {
-    name: "Carrots",
-    quantity: "5"
-  },
-  {
-    name: "Celery Sticks",
-    quantity: "10"
-  },
-  {
-    name: "Potatoes",
-    quantity: "3"
-  }
-];
-
-var shoppingList2 = [
-  {
-    name: "testing",
-    quantity: "10"
-  }
-];
+'use strict';
 
 angular.module('ShoppingListApp', [])
 .controller('ShoppingListAddController', ShoppingListAddController)

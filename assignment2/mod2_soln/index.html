@@ -27,11 +27,11 @@
         <div ng-controller='ShoppingListShowController as showList'>
           <ol>
             <li ng-repeat="item in showList.items">
-              {{ item.quantity }} of {{ item.name }}
+               {{ item.name }} {{ item.quantity }}
               <button ng-click="showList.removeItem($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button>
             </li>
           </ol>
-          <div class="emptyMessage">Everything is bought!</div>
+          <div ng-show="controllername.message" class="emptyMessage">Everything is bought!</div><!--Only show when every item has been clicked and has been removed from the tobuy list. ie. when tobuy list has length 0!-->
           </div>
         </div>  
 
@@ -41,7 +41,7 @@
           <ul>
             <li>Bought 10 cookies</li>
           </ul>
-          <div class="emptyMessage">Nothing bought yet.</div>
+          <div ng-show="controllername.message" class="emptyMessage">Nothing bought yet.</div><!--Only show when bought list is empty (i.e. has length 0)!-->
         </div>
       </div>
     </div>

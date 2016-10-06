@@ -8,11 +8,27 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
-div {
-  width: auto;
-  margin: 1em;
+h1 {
+  background: #560d3a;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: #f4e4a8;
 }
+div {
+  min-width: 250px;
+  margin: 1em;
 
+}
+.container {
+  border: 1px solid red;
+  padding: 1em;
+  margin: 0.2em;
+  min-width: 300px;
+  
+}
 ul {
   padding-left: 1px;
 }

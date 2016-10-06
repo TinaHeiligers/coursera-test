@@ -4,7 +4,8 @@
     <title>Shopping List Check Off</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="styles/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/style.css">
   </head>
 <body>
@@ -14,13 +15,13 @@
   <div class="row">
 
     <!-- To Buy List -->
-    <div class="col-md-6" ng-controller="ToBuyShoppingController as tobuy">
-     <h2>To Buy:</h2>
+    <div class="container" ng-controller="ToBuyShoppingController as tobuy">
+     <h2 class=" box toBuy">To Buy:</h2>
      <ul>
 
       <li ng-repeat="item in tobuy.items">
-          Buy {{ item.quantity }} of {{ item.name }}
-          <button class="btn btn-default" ng-click="tobuy.bought($index);"><span class="glyphicon glyphicon-ok"></span> Bought</button>
+          <span>Buy {{ item.quantity }} {{ item.name }}</span>
+          <button class="btn btn-default" ng-click="tobuy.bought($index);"><span class="fa fa-cart-plus" aria-hidden="true"></span> Bought</button>
       </li>
        
      </ul>
@@ -28,11 +29,11 @@
     </div>
 
     <!-- Already Bought List -->
-    <div class="col-md-6" ng-controller="AlreadyBoughtController as alreadybought">
-     <h2>Already Bought:</h2>
+    <div class="container" ng-controller="AlreadyBoughtController as alreadybought">
+     <h2 class="box bought">Already Bought:</h2>
      <ul>
        <li ng-repeat="item in alreadybought.items">
-          Bought {{ item.quantity }} of {{ item.name }}
+          <span>Bought {{ item.quantity }} {{ item.name }}</span>
           
         </li>
       

@@ -1,6 +1,9 @@
 h1 {
   margin-bottom: 30px;
 }
+h3 {
+  margin-left: 1em;
+}
 li {
   float:left;
 }
@@ -11,6 +14,7 @@ input[type="text"] {
 .narrow-button {
   float: left;
   margin-left: 10px;
+  margin-right: 10px;
 }
 .loader {
   display: none;

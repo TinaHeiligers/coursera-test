@@ -1,12 +1,11 @@
 (function () {
 'use strict';
   
-  angular.module('NarrowItDownApp', [])
-  .controller('NarrowItDownController', NarrowItDownController)
-  .service('MenuSearchService', MenuSearchService)
-  .constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
-  .directive('foundItems', FoundItems);
-
+angular.module('NarrowItDownApp', [])
+.controller('NarrowItDownController', NarrowItDownController)
+.service('MenuSearchService', MenuSearchService)
+.constant('ApiBasePath', "https://davids-restaurant.herokuapp.com")
+.directive('foundItems', FoundItems);
 
 function FoundItems() {
   var ddo = {
@@ -19,14 +18,8 @@ function FoundItems() {
     controllerAs: 'narrow',
     bindToController: true
   };
-
   return ddo;
 }
-
-
-
-
-
   NarrowItDownController.$inject = ['MenuSearchService'];
   function NarrowItDownController(MenuSearchService){
   
@@ -34,48 +27,34 @@ function FoundItems() {
     narrow.searchTerm="";
     narrow.items=[];
     narrow.first=true;
-   
-  
 
-    //narrow.items= MenuSearchService.getMachedMenuItems();
-
-    narrow.findToMe = function () {
-     
+    narrow.findMatchingItems = function () {
       narrow.first=false;
-     
-
       if (narrow.searchTerm!==""){
        
-        var promise=MenuSearchService.getMachedMenuItems(narrow.searchTerm.toLowerCase().trim());
-      
+        var promise=MenuSearchService.getMatchedMenuItems(narrow.searchTerm.toLowerCase().trim());
 
         promise.then(function (response) {
           narrow.items = response;
-           
         })
         .catch(function (error) {
-            console.log("Something went terribly wrong.");
+          console.log("Something went terribly wrong.");
         });
-   
       }
-      else {
-               narrow.items=[];
 
-               
+      else {
+        narrow.items=[];         
       }
-    } //end findToMe
+    } //end findMatchingItems
 
     narrow.delete=function(indexItem){
       narrow.items.splice(indexItem, 1);
     }
 
-    narrow.nothing=function(){
-      
-        if (narrow.items.length==0) return true
-        else return false;
-    
+    narrow.empty=function(){
+      if (narrow.items.length==0) return true
+      else return false;
     }
-    
   } //end NarrowItDownController
 
   MenuSearchService.$inject = ['$http', 'ApiBasePath']
@@ -84,7 +63,7 @@ function FoundItems() {
 
     //service.found=[];
 
-    service.getMachedMenuItems = function (searchTerm) {
+    service.getMatchedMenuItems = function (searchTerm) {
       return  $http({
         method: "GET",
         url: (ApiBasePath + "/menu_items.json")
@@ -96,13 +75,8 @@ function FoundItems() {
           if (items[i].description.indexOf(searchTerm)!=-1) filtered.push(items[i]);
         }
         return filtered;
-
-
       })
     }// end getMachedMenuItems
-
-   
-
   } //end service MenuSearchService
 
 

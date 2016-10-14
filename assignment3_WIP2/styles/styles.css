@@ -4,8 +4,13 @@ h1 {
 h3 {
   margin-left: 1em;
 }
-li {
+table {
   float:left;
+  display: flex;
+}
+td {
+  height: 1.5em;
+  text-align: left;
 }
 input[type="text"] {
   width: 200px;
@@ -15,6 +20,14 @@ input[type="text"] {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
+}
+td #td2 {
+  width: 30%;
+}
+.remove {
+  color: black;
+  background-color: #AAAAAA;
+  border: 1px #ABABAB;
 }
 .loader {
   display: none;

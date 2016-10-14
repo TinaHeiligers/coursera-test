@@ -61,24 +61,23 @@ function FoundItems() {
   function MenuSearchService($http, ApiBasePath) {
     var service = this;
 
-    //service.found=[];
-
     service.getMatchedMenuItems = function (searchTerm) {
       return  $http({
         method: "GET",
         url: (ApiBasePath + "/menu_items.json")
-      }).then (function(resolve){
+      })
+      .then (function(resolve){
         var items = resolve.data['menu_items'];
         
         var filtered=[];
         for (var i=0;i<items.length;i++){
-          if (items[i].description.indexOf(searchTerm)!=-1) filtered.push(items[i]);
+          if (items[i].description.indexOf(searchTerm)!=-1) {
+            filtered.push(items[i]);}
         }
         return filtered;
       })
     }// end getMachedMenuItems
   } //end service MenuSearchService
-
 
 })();
 

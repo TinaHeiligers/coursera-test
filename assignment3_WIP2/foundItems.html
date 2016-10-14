@@ -1,4 +1,4 @@
-<div>
+<!-- <div>
   <ul>
     <li ng-repeat="item in narrow.items">
       {{ item.short_name }},{{ item.name }}, {{ item.description }} 
@@ -6,7 +6,16 @@
       
     </li>
   </ul>
-</div>
-
+</div> -->
+<table class="table-hover">
+  <tr>
+  </tr>
+  <tr ng-repeat="item in narrow.items">
+    <td>{{ item.short_name }}</td>
+    <td id="td2">{{ item.name }}</td>
+    <td>{{ item.description }}</td>
+    <td><button class="btn btn-default remove" ng-click="narrow.delete($index);">Don't want this one!</button></td>
+  </tr>
+</table>
 
 

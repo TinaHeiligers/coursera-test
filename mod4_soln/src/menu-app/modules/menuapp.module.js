@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('MenuApp', []) //include data.module.js as dependency
+  angular.module('MenuApp', ['ui-router', 'data']); //include data.module.js as dependency
 
   //define routes.js
 

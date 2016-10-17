@@ -1,5 +1,14 @@
 (function () {
   'use strict';
+  angular.module('MenuApp')
+  .component('categories', {
+    templateUrl: 'src/menu-app/templates/components/categories.component.template.html',
+    bindings: {
+      categories: '<'
+    }
+  });
+  
+})();
   //create component called 'categories' that:
   //shows all available categories in the menu
 
@@ -23,4 +32,3 @@
   //   console.log("Something went terribly wrong.");
   // });
 
-})();

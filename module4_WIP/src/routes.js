@@ -1,34 +1,38 @@
 (function () {
   'use strict';
+
   angular.module('MenuApp')
   .config(RoutesConfig);
 
   RoutesConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
   function RoutesConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
-
+    
+    // *** Set up UI states ***
     $stateProvider
+    
     //Home page
     .state('home', {
       url: '/',
-      templateUrl: 'src/menuapp/templates/home.template.html'
+      templateUrl: 'src/menu-app/templates/home.template.html'
     })
 
     //Categories list page
-    .state('categories', {
-      url: '/categories', 
-      templateUrl: 'src/menuapp/templates/categories.template.html',
+    .state({
+      name: 'categories',
+      url: '/categories',
+      templateUrl: 'src/menu-app/templates/categories.state.template.html',
       controller: 'CategoriesController as catCtrl',
       resolve: {
-        items: ['MenuDataService', function(MenuDataService) {
-          return MenuDataService.getAllCategories();
+        categories: ['MenuDataService', function(MenuDataService) {
+          return MenuDataService.getAllCategories()
         }]
       }
     })
+
     // Items in a category page
     .state('menuitems', {
       url: '/menu-items/{categoryId}',
-      templateUrl: 'src/menuapp/templates/menu-items.template.html',
+      templateUrl: 'src/menu-app/templates/menu-items.template.html',
       controller: 'MenuItemsDetailController as itemsCtrl',
       resolve: {
         items: ['$stateParams', 'MenuDataService',
@@ -37,5 +41,7 @@
               }]
         }
     });
+    // Redirect to home page if no other URL matches
+    $urlRouterProvider.otherwise('/');
   }
 })();

@@ -2,23 +2,32 @@
 <html ng-app='MenuApp'>
 <head lang="en">
   <meta charset="utf-8">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
   <title>Menu App With Modules</title>
 </head>
 <body>
-  <h1>Restuarant Menu App</h1>
-  <h2>Welcome to our Restuarant!</h2>
+  <h1>Restaurant Menu</h1>
+
+  <!-- Initial view: link to categories -->
+  <h2><ui-view></ui-view></h2>
   <!-- Libraries -->
-    <script src="lib/jquery-3.1.0.min.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
 
     <!-- Modules -->
-    <script src="src/menuapp/menuapp.module.js"></script>
+    <script src="src/menu-app/menuapp.module.js"></script>
     <script src="src/data/data.module.js"></script>
 
-    <!-- menuapp module atrifacts -->
-    <script src="src/data/menudata.service.js"></script>
+    <!-- menuapp services -->
+    <script src="src/menu-app/menudata.service.js"></script>
 
-    <!-- data module artifacts -->
+    <!-- menuapp artifacts -->
+    <script src="src/menu-app/categories.component.js""></script>
+    <script src="src/menu-app/categories.controller.js""></script>
+
+    <!-- routes -->
+    <script src="src/routes.js"></script>
     
 </body>
 </html>

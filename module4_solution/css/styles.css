@@ -27,7 +27,8 @@ div.tabs {
 .category:hover {
 	font-weight: bold;
   color: #98490e;
-}
+  transform:scale(1.5,1);
+  -webkit-transform:scale(1.5,1);
 }
 
 .button-categories {

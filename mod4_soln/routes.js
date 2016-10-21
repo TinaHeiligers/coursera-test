@@ -1,3 +1,21 @@
+(function() {
+  'use strict';
+
+  angular.module('MenuApp')
+  .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+    
+    // Home state
+    $stateProvider.state({
+      name: 'home',
+      url: '/home',
+      templateUrl: 'src/templates/home.template.html'
+    });
+
+    $urlRouterProvider.otherwise('/');
+  }]);
+  
+})();
+
 // Your application should have 3 views (i.e., 3 view states): home (`home`), categories list (`categories`), items list (`items`).
 
 // When the user goes to `/` path in your application, a home screen should be shown. It's up to you what you place on the home screen. You can just say "Welcome to our Restaurant". The home screen should have a link to a list of categories of menu items in the restaurant. Clicking that link would obviously take the user to the `/categories` view.

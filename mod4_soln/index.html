@@ -1,33 +1,19 @@
 <!DOCTYPE html>
-<html ng-app="MenuApp">
+<html>
 <head>
-  <title>home</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <title>Restaurant Menu List</title>
 </head>
 <body>
-  <h1>Welcome!</h1>
+  <h1>Restaurant Menu List</h1>
+
+  <!-- Dynamically load content -->
   <ui-view></ui-view>
-  
+
   <!-- Libraries -->
   <script src="lib/angular.min.js"></script>
   <script src="lib/angular-ui-router.min.js"></script>
 
-  <!-- Modules -->
-  <script src="src/menu-app/modules/menuapp.module.js"></script>
-  <script src="src/menu-app/modules/data.module.js"></script>
-
-  <!-- Services -->
-  <script src="src/menu-app/services/menudata.service.js"></script>
-
-  <!-- Components -->
-  <script src="src/menu-app/components/categories.component.js"></script>
-  <script src="src/menu-app/components/items.component.js"></script>
-
-  <!-- Controllers -->
-  <script src="src/menu-app/controllers/categories.controller.js"></script>
-  <script src="src/menu-app/controllers/items.controller.js"></script>
-
-  <!-- Routers -->
-  <script src="src/menu-app/routers.js"></script>
-  
 </body>
 </html>

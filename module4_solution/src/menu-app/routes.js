@@ -4,28 +4,33 @@
 	angular.module('MenuApp')
 	.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
 
-		$stateProvider.state({
-			name: 'home',
-			url: '/home',
-			templateUrl: 'src/menu-app/templates/states/home.state.template.html'
-		});
+		$stateProvider
 
-		$stateProvider.state({
+		// Home view
+		.state({
+			name: 'home',
+			url: '/',
+			templateUrl: 'src/menu-app/templates/home.state.template.html'
+		})
+
+		// Categories View
+		.state({
 			name: 'categories',
 			url: '/categories',
-			templateUrl: 'src/menu-app/templates/states/categories.state.template.html',
+			templateUrl: 'src/menu-app/templates/categories.state.template.html',
 			controller: 'CategoriesController as catCtrl',
 			resolve: {
 				categories: ['MenuDataService', function(MenuDataService) {
 					return MenuDataService.getAllCategories()
 				}]
 			}
-		});
+		})
 
-		$stateProvider.state({
+		// category Items View
+		.state({
 			name: 'items',
 			url: '/items/{categoryID}',
-			templateUrl: 'src/menu-app/templates/states/items.state.template.html',
+			templateUrl: 'src/menu-app/templates/items.state.template.html',
 			controller: 'ItemsController as itemsCtrl',
 			resolve: {
 				menuData: ['$stateParams', 'MenuDataService', function($stateParams, MenuDataService) {
@@ -34,7 +39,7 @@
 			}
 		});
 
-		$urlRouterProvider.otherwise('/home');
+		$urlRouterProvider.otherwise('/');
 
 	}]);
 

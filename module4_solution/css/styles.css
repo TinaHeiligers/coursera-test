@@ -1,10 +1,19 @@
 body {
-  font-size: 1.2em;
-}
+  font-size: 1.0em;
 
+}
+h1 {
+  font-family: 'Bungee Inline', cursive;
+  color: #e4dcc9;
+  text-shadow: 2px 2px #060501;
+  background-color: #5b4c2d;
+  padding: 1em;
+}
 div.tabs > a, div.tabs > button {
-  margin-right: 10px;
-  font-size: 1.2em;
+  color: #fe0100;
+  text-decoration: none;
+  /*margin-right: 10px;*/
+  font-size: 1.0em;
 }
 
 div.tabs {
@@ -17,6 +26,37 @@ div.tabs {
 
 .category:hover {
 	font-weight: bold;
+  color: #98490e;
+}
 }
 
-
+.button-categories {
+  background-color: #e4dcc9;
+  font-size: 1em;
+  font-family: Sans-serif;
+  min-width: 200px;
+  float: right;
+}
+.button-home {
+  background-color: #e4dcc9;
+  font-size: 1em;
+  font-family: Sans-serif;
+  min-width: 200px;
+  float: center;
+}
+li {
+  list-style: none;
+  padding-left: 10px;
+  text-align: center;
+  font-family: cursive;
+}
+h2 {
+  color: #5b4c2d;
+  padding-left: 20px;
+  text-align: center;
+  font-family: 'Bungee Inline', cursive;
+}
+h3 {
+ text-align: center;
+ font-style: italic; 
+}

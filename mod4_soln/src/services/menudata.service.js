@@ -1,44 +1,31 @@
 (function() {
   'use strict';
+
   angular.module('data')
-  .service('MenuDataService', MenuDataService);
+  .service('MenuDataService', ['$http', 'ApiBasePath', function($http, ApiBasePath) {
 
-  MenuDataService.$inject = ['$http', 'ApiBasePath'];
-  function MenuDataService($http, ApiBasePath) {
-    var service = this;
-
-    service.getAllCategories = function() {
-      console.log('In MenuDataService.getAllCategories')
+    this.getAllCategories = function() {
       return $http({
         method: 'GET',
         url: ApiBasePath + '/categories.json'
-      }).then(function(result) {
-              console.log(result.data);
-              return result.data;
-              }, function errorCallback(result) {
-                    function errorCallback() {
-                      console.log('Something went wrong');
-                };
-            });
+      }).then(function(response) {
+        console.log("I'm here")
+        return response.data;
+      });
     };
 
-    service.getItemsForCategory = function(categoryShortName) {
-      console.log('In MenuDataService.getItemsForCategory')
+    this.getItemsForCategory = function(categoryShortName) {
       return $http({
         method: 'GET',
         url: ApiBasePath + '/menu_items.json',
         params: {
           category: categoryShortName
         }
-      }).then(function(result) {
-              console.log(result.data);
-              return result.data;
-              }, function errorCallback(result) {
-                    function errorCallback() {
-                      console.log('Something went wrong');
-                };
-            });
+      }).then(function(response) {
+        return response.data;
+      }); 
     };
-  };
+
+  }]);
 
 })();

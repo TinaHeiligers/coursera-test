@@ -1,9 +1,9 @@
-(function() {
-  'use strict';
+// (function() {
+//   'use strict';
 
-  angular.module('MenuApp')
-  .controller('CategoriesController', ['categories', function(categories) {
-    this.categories = categories;
-  }]);
+//   angular.module('MenuApp')
+//   .controller('CategoriesController', ['categories', function(categories) {
+//     this.categories = categories;
+//   }]);
 
-})();
+// })();

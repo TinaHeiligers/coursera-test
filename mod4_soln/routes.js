@@ -7,7 +7,7 @@
     // Home state
     $stateProvider.state({
       name: 'home',
-      url: '/home',
+      url: '/',
       templateUrl: 'src/templates/home.template.html'
     });
 

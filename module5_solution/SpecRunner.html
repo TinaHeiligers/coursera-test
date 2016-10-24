@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Jasmine Spec RUnner v2.4.1</title>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner </title>
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+
+  <!-- source files for Jasmine -->
+  <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+  <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+  <script src="lib/jasmine-2.4.1/boot.js"></script>
+
+  <!-- include source files for angular here... -->
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-ui-router.min.js"></script>
+  <script src="lib/angular-mocks.js"></script>
+
+  <!-- include source files for app and artifacts here... -->
+  <script src="/src/restaurant.module.js"></script>
+  <script src="/src/common/common.module.js"></script>
+  <script src="/src/common/loading/loading.interceptor.js"></script>
+  <script src="src/common/menu.service.js"></script>
+  <script src="/src/public/public.module.js"></script>
+  <!-- need to include the loading.interceptor.js file as well. -->
+
+  <!-- spec file -->
+  <script src="spec/menu.service.spec.js"></script>
 </head>
 <body>
-  <!-- Add all files to test against here. -->
+
 </body>
 </html>

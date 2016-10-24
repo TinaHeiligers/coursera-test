@@ -36,7 +36,7 @@
       promise
     .then(function(result) {
         $ctrl.regForm.shortName.$setValidity('shortName', true);
-        // console.log("in .then", promise.data)
+        // console.log("in .then", $ctrl.regForm.shortName)
     }, function(reason) {
         $ctrl.regForm.shortName.$setValidity('shortName', false);
     });

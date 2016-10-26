@@ -41,8 +41,18 @@ function routeConfig ($stateProvider) {
         }]
       }
     })
-    // add .state('public.my-info')
+     // add more states here: need two for the form
+
+      // sign-up
+    .state('public.sign-up', {
+      // url:'/sign-up',
+      templateUrl: 'src/public/sign-up/sign-up.html',
+      controller: 'SignUpController'
+
+    })
+      // my-info
     .state('public.my-info', {
+      // url:'/my-info',
       templateUrl: 'src/public/my-info/my-info.html',
       controller: 'MyInfoController',
       controllerAs: 'MyInfoCtrl',
@@ -51,12 +61,9 @@ function routeConfig ($stateProvider) {
           return UserService.getUser();
         }]
       }
-    })
-    // add .state('public.sign-up')
-    .state('public.sign-up', {
-      templateUrl: 'src/public/sign-up/sign-up.html',
-      controller: 'SignUpController'
-      });
-    }
+      // add controller
+    });
+}
 
 })();
+

@@ -1,9 +1,10 @@
 <div class="container" ng-controller="SignUpController as reg">
-  <h2 id="sign-up-title" class="text-center">Sign Up</h2>
+  <h2 id="sign-up-title" class="text-center">Sign Me Up!</h2>
   <fieldset>
   <legend>Register</legend>
 
   <form name="reg.regForm" novalidate>
+  <!-- replace all references to reg.regForm with plain regForm -->
     <!-- FirstName -->
     <input type="text" name="firstName" class="form-control" placeholder="First Name"
     ng-model="reg.user.firstName"
@@ -29,7 +30,7 @@
     <input type="text" name="phone" class="form-control" placeholder="Phone Number ###-###-####"
     ng-model="reg.user.phone"
     pattern="(\d{3})-(\d{3})-(\d{4})">
-    <p ng-if="reg.regForm.phone.$invalid && reg.regForm.phone.touched" class="help-block">Phone must be in the format ###-###-####.</p>
+    <p ng-if="reg.regForm.phone.$invalid && reg.regForm.phone.$touched" class="help-block">Phone must be in the format ###-###-####.</p>
     <br>
     <!-- Favorite Dish -->
     <input type="test" name="shortName" class="form-control" placeholder="Favorite Dish Number (format: [A-Z][1-99])"
@@ -39,8 +40,8 @@
     <p ng-if="reg.regForm.shortName.$invalid && reg.regForm.shortName.$touched" class="help-block">No such menu item exists</p>
     <br>
   
-    <!-- SUBMIT button -->
-    <button class="btn btn-default"
+    <!-- Submit button -->
+    <button class="btn btn-secondary"
     ng-disabled="reg.regForm.$invalid"
     ng-click="reg.submit()">Submit My Info!</button>
   </form>

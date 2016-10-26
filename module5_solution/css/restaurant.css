@@ -96,6 +96,13 @@ input.ng-invalid.ng-dirty {
   background-color: #ffcccc;
 }
 
+.form-control {
+  align-items: center;
+  text-align: center;
+  font-size: 1em;
+  /*width: auto;*/
+  /*margin-left: 400px;*/
+}
 .help-block {
   color: #b30000;
 }
@@ -104,6 +111,17 @@ input.ng-invalid.ng-dirty {
   color: #008000;
 }
 
+
+.signUp {
+  font-size: 1.5em;
+  color: #f6b319;
+  text-align: center;
+}
+
+a.signUp:hover {
+  color: #557c3e;
+  text-decoration: none;
+}
 /*END FORM STYLING*/
 /* FOOTER */
 .panel-footer {

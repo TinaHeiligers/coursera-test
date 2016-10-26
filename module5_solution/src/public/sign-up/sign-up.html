@@ -21,19 +21,19 @@
     class="help-block">Your last name is required.</p>
     <br>
     <!-- Email -->
-    <input type="email" name="email" class="form-control" placeholder="Email"
+    <input type="email" name="email" class="form-control" placeholder="Email format: name@domain.TLD"
     ng-model="reg.user.email"
     required>
     <p ng-if="reg.regForm.email.$invalid && reg.regForm.email.$touched" class="help-block">Must be a valid email address: name@domain </p>
     <br>
     <!-- Phone -->
-    <input type="text" name="phone" class="form-control" placeholder="Phone Number ###-###-####"
+    <input type="text" name="phone" class="form-control" placeholder="Phone Number format: ###-###-####"
     ng-model="reg.user.phone"
     pattern="(\d{3})-(\d{3})-(\d{4})">
     <p ng-if="reg.regForm.phone.$invalid && reg.regForm.phone.$touched" class="help-block">Phone must be in the format ###-###-####.</p>
     <br>
     <!-- Favorite Dish -->
-    <input type="test" name="shortName" class="form-control" placeholder="Favorite Dish Number (format: [A-Z][1-99])"
+    <input type="test" name="shortName" class="form-control" placeholder="Favorite Dish Number (eg D3)"
     ng-model="reg.user.dish.shortName"
     ng-blur="reg.checkMenuItem()"
     required>
